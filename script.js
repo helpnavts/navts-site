@@ -8,12 +8,23 @@ document.getElementById('year').textContent = new Date().getFullYear();
 function splitChars(node) {
   const text = node.textContent;
   node.textContent = '';
-  [...text].forEach((ch, i) => {
-    const span = document.createElement('span');
-    span.className = 'char';
-    span.style.setProperty('--c', String(i));
-    span.textContent = ch === ' ' ? '\u00a0' : ch;
-    node.appendChild(span);
+  let index = 0;
+  text.split(/(\s+)/).forEach((chunk) => {
+    if (!chunk) return;
+    if (/^\s+$/.test(chunk)) {
+      node.appendChild(document.createTextNode(' '));
+      return;
+    }
+    const word = document.createElement('span');
+    word.className = 'h-word';
+    [...chunk].forEach((ch) => {
+      const span = document.createElement('span');
+      span.className = 'char';
+      span.style.setProperty('--c', String(index++));
+      span.textContent = ch;
+      word.appendChild(span);
+    });
+    node.appendChild(word);
   });
 }
 

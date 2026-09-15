@@ -35,6 +35,7 @@ body.is-loading .cursor,.cursor.is-off{display:none}
 .button-primary:hover:after{transform:translateX(130%)}
 .hero h1 .line{display:block;overflow:hidden;perspective:500px}
 .hero h1 .split-chars{display:block}
+.hero h1 .h-word{display:inline-block;white-space:nowrap}
 .hero h1 .char{display:inline-block;opacity:0;transform:translateY(120%) rotateX(-70deg);transform-origin:bottom;color:var(--ink)}
 .hero h1 .split-chars.soft .char{color:#6480a8}
 body.is-ready .hero h1 .char{animation:char-rise 1.05s cubic-bezier(.16,1,.3,1) forwards;animation-delay:calc(var(--c)*22ms + .15s)}
