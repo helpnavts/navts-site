@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://navts.tech/</loc>
-    <lastmod>2026-09-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://navts.tech/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://navts.tech/company/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://navts.tech/products/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://navts.tech/products/afterglow/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://navts.tech/services/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://navts.tech/services/website-design/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://navts.tech/work/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://navts.tech/faq/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://navts.tech/contact/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>
