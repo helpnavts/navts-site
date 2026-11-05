@@ -62,3 +62,18 @@
 .product-card .product-status{display:inline-flex;align-items:center}
 .breadcrumb a{text-decoration:underline;text-underline-offset:3px}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* Accessibility and progressive-enhancement release fixes */
+body.is-loading{overflow:auto}
+.loader{display:none}
+.js-ready .loader{display:grid}
+.reveal{opacity:1;transform:none}
+.js-ready .reveal{opacity:0;transform:translateY(18px)}
+.js-ready .reveal.is-visible{opacity:1;transform:none}
+.mobile-menu[aria-hidden="true"]{pointer-events:none}
+.mobile-menu[aria-hidden="false"]{pointer-events:auto}
+.menu-toggle:focus-visible,.mobile-menu a:focus-visible,.button:focus-visible,.text-link:focus-visible,.card-link:focus-visible{outline:3px solid #5aa4ff;outline-offset:4px}
+.contact-form select{display:block;width:100%;border:1px solid #dbe3eb;border-radius:11px;padding:12px 13px;margin-top:7px;font:500 13px "DM Sans";outline:none;background:#fbfcfe}
+.contact-form select:focus{border-color:#6ca7ff;box-shadow:0 0 0 4px rgba(45,124,255,.09)}
+.form-fallback{font-size:11px;line-height:1.55;color:#667188;margin:12px 2px 0}
+@media(prefers-reduced-motion:reduce){.js-ready .reveal{opacity:1;transform:none;transition:none}}
