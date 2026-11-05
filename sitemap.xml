@@ -3,7 +3,8 @@
   <url><loc>https://navts.tech/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://navts.tech/company/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://navts.tech/products/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://navts.tech/products/afterglow/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://navts.tech/products/games/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://navts.tech/products/games/afterglow/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://navts.tech/services/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://navts.tech/services/website-design/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://navts.tech/work/</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
