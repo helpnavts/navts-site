@@ -35,6 +35,8 @@
 .trustgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
 .final{padding:110px 6vw;text-align:center;background:radial-gradient(ellipse at 50% 0%,#12e7c82b,transparent 55%),#071020;border-top:1px solid #a4d9ff20}.final h2{font:700 clamp(36px,5vw,60px)/1.04 Manrope;letter-spacing:-.06em;margin:0 0 18px}.final p{max-width:600px;margin:0 auto 30px;color:#a8bad0;line-height:1.8}
 .stores{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:26px}.store{padding:14px 22px;border-radius:14px;border:1px dashed #9ddaff55;color:#cfe3f6;font-size:13px;font-weight:700;text-align:left}.store small{display:block;color:#7f93ac;font-weight:500;font-size:11px;letter-spacing:.08em}
+.ea{max-width:520px;margin:34px auto 0;text-align:left;display:grid;gap:14px}.ea label{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;color:#b5c7da;margin-bottom:6px}.ea input,.ea select{width:100%;background:#0a1322;border:1px solid #9ddaff30;border-radius:12px;color:#f4f8ff;font:15px 'DM Sans',sans-serif;padding:13px 14px}.ea input:focus,.ea select:focus{outline:2px solid var(--teal);outline-offset:1px}.ea .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.ea .chk{display:flex;gap:10px;align-items:flex-start;font-size:12.5px;line-height:1.6;color:#9eb1c8;font-weight:400;letter-spacing:0}.ea .chk input{width:auto;margin-top:3px;accent-color:#3ee0c8}.ea button{cursor:pointer;border:0;font:800 14px 'DM Sans',sans-serif}.ea button[disabled]{opacity:.6;cursor:wait}.ea .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}.ea-msg{min-height:22px;font-size:14px;text-align:center}.ea-msg.ok{color:var(--teal)}.ea-msg.err{color:#ff9a9a}
+@media(max-width:560px){.ea .row{grid-template-columns:1fr}}
 .footer{padding:26px 6vw;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid #a4d9ff1a;color:#8398b1;font-size:13px}.footer a{color:#b5c7da;text-decoration:none}
 @media(max-width:980px){.sm-hero-grid,.intro{grid-template-columns:1fr;gap:34px}.sm-hero-phone{margin:10px auto 0;transform:none;max-width:300px}.features,.status,.trustgrid{grid-template-columns:1fr}.shots{grid-template-columns:repeat(2,1fr)}.section-head{display:block}.section-head p{margin-top:14px}}
 @media(max-width:560px){.sm-hero{padding:92px 22px 60px}.sm .section{padding:68px 22px}.shots{gap:12px}.shot figcaption{font-size:12.5px}.shot small{font-size:11.5px}.sm-hero h1{font-size:44px}}
@@ -50,7 +52,7 @@
 <h1>Practice smarter.<br><span>Never see a repeat.</span></h1>
 <p class="lead">SnapMCQ is an MCQ practice app for Indian entrance exams, starting with NEET UG. Every question comes with a worked solution, and a question you have answered is never served to you as new again.</p>
 <div class="badge"><i></i>Coming soon to Google Play and the App Store</div>
-<div class="actions"><a class="btn" href="#screens">See the app ↓</a><a class="link" href="mailto:helpnavts@gmail.com?subject=SnapMCQ%20early%20access">Ask for early access →</a></div>
+<div class="actions"><a class="btn" href="#screens">See the app ↓</a><a class="link" href="#early-access">Ask for early access →</a></div>
 <div class="trust"><span>NEET UG</span><span>JEE Main to follow</span><span>Email sign-in, no password</span><span>Delete your data anytime</span></div>
 </div>
 <figure class="phone sm-hero-phone"><img src="/assets/snapmcq/snapmcq-home.webp" alt="SnapMCQ home screen" width="780" height="1688"></figure>
@@ -94,9 +96,31 @@
 <div class="card"><h3>Younger students</h3><ul style="list-style:none;padding:0"><li>Students under 18 need a parent or guardian's details at sign-up. Read our <a href="/products/applications/snapmcq/privacy/" style="color:var(--teal)">Privacy Policy</a>.</li></ul></div>
 </div></div></section>
 
-<section class="final"><div class="kicker">COMING SOON</div><h2>Be among the first<br>to practise.</h2><p>SnapMCQ will be on Google Play and the App Store soon. If you are a student, a parent or an institute who would like early access, write to us and we will tell you when it is ready.</p>
+<section class="final" id="early-access"><div class="kicker">COMING SOON</div><h2>Be among the first<br>to practise.</h2><p>SnapMCQ will be on Google Play and the App Store soon. Leave your details and we will tell you the moment it is ready. Students, parents and institutes are all welcome.</p>
 <div class="stores"><div class="store"><small>COMING SOON</small>Google Play</div><div class="store"><small>COMING SOON</small>App Store</div></div>
-<a class="btn" href="mailto:helpnavts@gmail.com?subject=SnapMCQ%20early%20access">Ask for early access</a></section>
+<form class="ea" id="eaForm" novalidate>
+<div><label for="eaName">Name <span style="font-weight:400">(optional)</span></label><input id="eaName" name="name" autocomplete="name" maxlength="100"></div>
+<div class="row"><div><label for="eaEmail">Email</label><input id="eaEmail" name="email" type="email" inputmode="email" autocomplete="email" required maxlength="200" placeholder="you@example.com"></div>
+<div><label for="eaPhone">Phone <span style="font-weight:400">(optional)</span></label><input id="eaPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="20" placeholder="+91"></div></div>
+<div><label for="eaRole">I am a</label><select id="eaRole" name="role"><option value="student">Student</option><option value="parent">Parent</option><option value="institute">Coaching institute or teacher</option><option value="other">Other</option></select></div>
+<div class="hp" aria-hidden="true"><label for="eaHp">Leave this empty</label><input id="eaHp" name="website" tabindex="-1" autocomplete="off"></div>
+<label class="chk"><input type="checkbox" id="eaConsent" required><span>I agree that NAVTS may use these details only to contact me about the SnapMCQ launch. I can ask for them to be deleted any time at helpnavts@gmail.com. If I am under 18, a parent or guardian has agreed.</span></label>
+<button class="btn" type="submit" id="eaBtn" style="justify-content:center">Ask for early access</button>
+<div class="ea-msg" id="eaMsg" role="status" aria-live="polite"></div>
+</form></section>
+<script>
+(function(){var f=document.getElementById('eaForm');if(!f)return;var m=document.getElementById('eaMsg'),b=document.getElementById('eaBtn');
+var URL='https://guivyzgqcgsdyazwypbn.supabase.co/rest/v1/rpc/submit_early_access',KEY='sb_publishable_rejb4ToHGPzDD5kUJAtWPQ_YK0fR2wL';
+function say(t,c){m.textContent=t;m.className='ea-msg '+(c||'')}
+f.addEventListener('submit',function(ev){ev.preventDefault();var email=f.email.value.trim();
+if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){say('Please enter a valid email address.','err');return}
+if(!document.getElementById('eaConsent').checked){say('Please tick the box so we can contact you.','err');return}
+b.disabled=true;say('Sending...');
+fetch(URL,{method:'POST',headers:{'Content-Type':'application/json',apikey:KEY},body:JSON.stringify({p_email:email,p_phone:f.phone.value.trim()||null,p_name:f.name.value.trim()||null,p_role:f.role.value,p_consent:true,p_hp:f.website.value||null})})
+.then(function(r){return r.json().then(function(j){return{ok:r.ok,j:j}})})
+.then(function(x){b.disabled=false;if(x.ok){f.reset();say('Thank you! We will email you as soon as SnapMCQ is ready.','ok')}else{var t=(x.j&&x.j.message)||'';say(t.indexOf('invalid_email')>-1?'That email does not look right.':t.indexOf('try_later')>-1?'We are getting a lot of requests. Please try again tomorrow.':'Something went wrong. Please email helpnavts@gmail.com instead.','err')}})
+.catch(function(){b.disabled=false;say('Could not send. Please email helpnavts@gmail.com instead.','err')})});})();
+</script>
 </main>
 <footer class="footer"><span>© <span id="year"></span> NAVTS. All rights reserved.</span><span>SnapMCQ · An NAVTS application</span><a href="/">NAVTS Home ↗</a><nav aria-label="SnapMCQ legal and support" style="display:flex;gap:18px;flex-wrap:wrap"><a href="/products/applications/snapmcq/privacy/">Privacy</a><a href="/products/applications/snapmcq/terms/">Terms</a><a href="/products/applications/snapmcq/support/">Support</a><a href="/products/applications/snapmcq/delete-account/">Delete account</a></nav></footer>
 </div><script src="/script.js?v=navts2026"></script><script>document.getElementById('year').textContent=new Date().getFullYear();</script>
