@@ -2,22 +2,102 @@
 <html lang="en-IN">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="index,follow"><meta name="theme-color" content="#050914">
-<title>SnapMCQ: NEET and JEE MCQ practice | NAVTS</title>
-<meta name="description" content="SnapMCQ is a question practice app for NEET UG and JEE Main by NAVTS: chapter-wise MCQs with solutions, timed tests and a never-repeat guarantee.">
+<title>SnapMCQ: NEET and JEE MCQ practice app | NAVTS</title>
+<meta name="description" content="SnapMCQ by NAVTS is an MCQ practice app for NEET UG and JEE Main: chapter-wise questions with solutions, timed tests, a revision queue and a never-repeat guarantee. Coming soon to Google Play and the App Store.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#050914">
 <link rel="canonical" href="https://navts.tech/products/applications/snapmcq/">
+<meta property="og:title" content="SnapMCQ: practice smarter, never see a repeat"><meta property="og:description" content="MCQ practice for NEET UG and JEE Main with solutions, timed tests and smart revision. Coming soon."><meta property="og:image" content="https://navts.tech/assets/snapmcq/snapmcq-home.webp"><meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css?v=navts2026">
 <style>
-*{box-sizing:border-box}body{margin:0;background:#050914;color:#edf5ff;font:16px/1.75 Arial,sans-serif}.wrap{max-width:850px;margin:auto;padding:40px 24px 90px}.brand{display:inline-block;color:#7cc4ff;font-weight:800;letter-spacing:.2em;text-decoration:none;margin-bottom:48px}.eyebrow{color:#7cc4ff;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}h1{font-size:clamp(38px,7vw,64px);line-height:1.05;letter-spacing:-.05em;margin:14px 0 16px}h2{font-size:21px;margin:34px 0 8px}p,li{color:#b5c5d8}a{color:#7cc4ff}.notice{padding:18px 20px;border:1px solid #7cc4ff40;border-radius:14px;background:#0b1728;margin:26px 0}.muted{color:#8297b0;font-size:13px}.footer{border-top:1px solid #ffffff20;margin-top:60px;padding-top:22px;display:flex;gap:18px;flex-wrap:wrap}.footer a{color:#b5c5d8}
+:root{--bg:#050914;--panel:#0b1425;--teal:#3ee0c8;--ink:#f4f8ff;--muted:#9aabc2}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body.sm{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+.sm .site-shell{background:transparent}.sm .nav{background:rgba(5,9,20,.8);backdrop-filter:blur(18px);border-bottom:1px solid #8bdcff20}.sm .brand,.sm .desktop-nav a{color:#eff8ff}.sm .nav-cta{background:var(--teal);color:#04101a;border-radius:99px;padding:12px 20px}
+.sm .mobile-menu{background:#071020}.sm .section{max-width:1240px;margin:auto;padding:96px 6vw}
+.sm-hero{position:relative;overflow:hidden;min-height:0;display:block;padding:110px max(6vw,calc((100vw - 1240px)/2)) 90px;background:radial-gradient(ellipse at 78% 30%,#0f4d4a66,transparent 55%),radial-gradient(ellipse at 10% 90%,#12345455,transparent 50%),#050914}
+.sm-hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:5vw;align-items:center}
+.eyebrow{display:flex;align-items:center;gap:10px;color:#a9c1d9;font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase}.eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 16px var(--teal)}.eyebrow a{color:inherit;text-decoration:none}
+.sm-hero h1{font:700 clamp(42px,5.6vw,74px)/1 Manrope,sans-serif;letter-spacing:-.06em;margin:26px 0 24px}.sm-hero h1 span{color:var(--teal)}.sm-hero p.lead{max-width:520px;color:#c1cede;font-size:17px;line-height:1.8;margin:0}
+.badge{display:inline-flex;align-items:center;gap:10px;margin-top:28px;padding:10px 16px;border:1px solid #3ee0c847;border-radius:99px;background:#0a1f2a;color:#bff7ee;font-size:13px;font-weight:700}.badge i{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 12px var(--teal)}
+.actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin:30px 0 8px}.btn{display:inline-flex;align-items:center;gap:12px;background:var(--teal);color:#03101b;padding:15px 23px;border-radius:99px;text-decoration:none;font-size:13px;font-weight:800;box-shadow:0 10px 40px #3ee0c822}.link{color:#e3effa;text-decoration:none;font-size:13px;font-weight:700}
+.trust{display:flex;gap:26px;flex-wrap:wrap;padding-top:26px;margin-top:30px;border-top:1px solid #b3d9f21b;color:#b5c7da;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.phone{margin:0;border-radius:34px;padding:9px;background:linear-gradient(160deg,#1b2b44,#0b1425);border:1px solid #9ddaff30;box-shadow:0 30px 80px #0008}.phone img{display:block;width:100%;height:auto;border-radius:26px}
+.sm-hero-phone{max-width:330px;margin-left:auto;margin-right:2vw;transform:rotate(2deg)}
+.kicker{color:var(--teal);font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;margin-bottom:20px}.heading{font:700 clamp(32px,4.2vw,54px)/1.08 Manrope;letter-spacing:-.055em;margin:0}
+.intro{display:grid;grid-template-columns:.9fr 1.1fr;gap:8vw;align-items:start}.bodycopy{color:#adbed1;font-size:16px;line-height:1.9;margin:0 0 18px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:48px}.feature{border:1px solid #9ddaff20;background:linear-gradient(145deg,#102039b8,#08111f);border-radius:18px;padding:26px;min-height:190px}.feature b{display:block;color:var(--teal);font-size:11px;letter-spacing:.18em;margin-bottom:26px}.feature h3{font:700 19px Manrope;margin:0 0 10px}.feature p{color:#9fb1c7;font-size:14px;line-height:1.7;margin:0}
+.screens{background:linear-gradient(180deg,#091326,#050914);border-top:1px solid #9ddaff18;border-bottom:1px solid #9ddaff18}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:40px}.section-head p{max-width:430px;color:#9eb1c8;line-height:1.7;margin:0}
+.shots{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}.shot{margin:0;min-width:0}.shot figcaption{padding:16px 2px 0;font-size:14px;font-weight:700}.shot small{display:block;color:#8ea2ba;font-weight:400;font-size:12.5px;line-height:1.6;margin-top:4px}
+.note{color:#7f93ac;font-size:12.5px;margin-top:26px}
+.status{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:44px}.card{border:1px solid #9ddaff20;background:#0a1322;border-radius:18px;padding:26px}.card h3{font:700 18px Manrope;margin:0 0 12px}.card ul{margin:0;padding-left:18px;color:#a8bad0;font-size:14px;line-height:1.9}.tag{display:inline-block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;margin-bottom:14px}.tag.now{color:var(--teal)}.tag.next{color:#ffd37a}.tag.later{color:#a9b8ff}
+.trustgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
+.final{padding:110px 6vw;text-align:center;background:radial-gradient(ellipse at 50% 0%,#12e7c82b,transparent 55%),#071020;border-top:1px solid #a4d9ff20}.final h2{font:700 clamp(36px,5vw,60px)/1.04 Manrope;letter-spacing:-.06em;margin:0 0 18px}.final p{max-width:600px;margin:0 auto 30px;color:#a8bad0;line-height:1.8}
+.stores{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:26px}.store{padding:14px 22px;border-radius:14px;border:1px dashed #9ddaff55;color:#cfe3f6;font-size:13px;font-weight:700;text-align:left}.store small{display:block;color:#7f93ac;font-weight:500;font-size:11px;letter-spacing:.08em}
+.footer{padding:26px 6vw;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid #a4d9ff1a;color:#8398b1;font-size:13px}.footer a{color:#b5c7da;text-decoration:none}
+@media(max-width:980px){.sm-hero-grid,.intro{grid-template-columns:1fr;gap:34px}.sm-hero-phone{margin:10px auto 0;transform:none;max-width:300px}.features,.status,.trustgrid{grid-template-columns:1fr}.shots{grid-template-columns:repeat(2,1fr)}.section-head{display:block}.section-head p{margin-top:14px}}
+@media(max-width:560px){.sm-hero{padding:92px 22px 60px}.sm .section{padding:68px 22px}.shots{gap:12px}.shot figcaption{font-size:12.5px}.shot small{font-size:11.5px}.sm-hero h1{font-size:44px}}
 </style>
 </head>
-<body><main class="wrap">
-<a class="brand" href="/">NAVTS</a><div class="eyebrow">SnapMCQ · An NAVTS application</div>
-<h1>Practice smarter.<br>Never see a repeat.</h1>
-<p>SnapMCQ is an MCQ practice app for Indian entrance exams, starting with NEET UG. Every question comes with a worked solution, and a question you have answered is never served to you as new again.</p>
-<div class="notice"><strong>Availability</strong><p>SnapMCQ is in closed testing on Android. A public release on Google Play will be announced here.</p></div>
-<h2>What you get</h2>
-<ul><li>Chapter-wise practice for NEET UG Class 11 Physics, Chemistry and Biology, with Class 12 and JEE Main following</li><li>Step-by-step solutions for every question</li><li>Timed tests with the exam's marking scheme</li><li>A revision queue that brings wrong answers back after a few days</li><li>Progress analytics by subject, chapter and topic</li></ul>
-<h2>Built for students</h2><p>Sign in with just your email, no password. You can delete your account and data in the app whenever you like.</p>
-<h2>Information</h2><p><a href="/products/applications/snapmcq/privacy/">Privacy Policy</a> · <a href="/products/applications/snapmcq/terms/">Terms of Use</a> · <a href="/products/applications/snapmcq/support/">Support</a> · <a href="/products/applications/snapmcq/delete-account/">Delete account</a></p>
-<footer class="footer"><a href="/products/applications/snapmcq/">SnapMCQ</a><a href="/products/applications/snapmcq/privacy/">Privacy</a><a href="/products/applications/snapmcq/terms/">Terms</a><a href="/products/applications/snapmcq/support/">Support</a><a href="/products/applications/snapmcq/delete-account/">Delete account</a><a href="/">NAVTS home</a></footer>
-</main></body></html>
+<body class="sm">
+<a class="skip-link" href="#main">Skip to content</a><div class="page-noise" aria-hidden="true"></div><div class="site-shell">
+<header class="nav"><a class="brand" href="/" aria-label="NAVTS home"><span class="brand-mark">N</span><span>NAVTS</span></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/company/">Company</a><a href="/products/">Products</a><a href="/services/">Services</a><a href="/work/">Work</a><a href="/faq/">FAQ</a></nav><a class="nav-cta" href="#screens">See the app ↓</a><button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button></header>
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true"><div class="mobile-menu-inner"><p class="mobile-menu-kicker">Explore NAVTS</p><a href="/">Home</a><a href="/company/">Company</a><a href="/products/">Products</a><a href="/services/">Services</a><a href="/work/">Work</a><a href="/faq/">FAQ</a><a href="/contact/">Contact</a></div></div>
+<main id="main">
+<section class="sm-hero"><div class="sm-hero-grid"><div>
+<div class="eyebrow"><a href="/products/">Products</a> / <a href="/products/applications/">Applications</a> · A NAVTS application</div>
+<h1>Practice smarter.<br><span>Never see a repeat.</span></h1>
+<p class="lead">SnapMCQ is an MCQ practice app for Indian entrance exams, starting with NEET UG. Every question comes with a worked solution, and a question you have answered is never served to you as new again.</p>
+<div class="badge"><i></i>Coming soon to Google Play and the App Store</div>
+<div class="actions"><a class="btn" href="#screens">See the app ↓</a><a class="link" href="mailto:helpnavts@gmail.com?subject=SnapMCQ%20early%20access">Ask for early access →</a></div>
+<div class="trust"><span>NEET UG</span><span>JEE Main to follow</span><span>Email sign-in, no password</span><span>Delete your data anytime</span></div>
+</div>
+<figure class="phone sm-hero-phone"><img src="/assets/snapmcq/snapmcq-home.webp" alt="SnapMCQ home screen" width="780" height="1688"></figure>
+</div></section>
+
+<section class="section"><div class="intro"><div><div class="kicker">/ The idea</div><h2 class="heading">Fresh questions.<br>Honest feedback.</h2></div><div>
+<p class="bodycopy">Most practice apps let questions repeat until your score looks better than your understanding. SnapMCQ is built the other way round: you meet each question as new exactly once, you see the reasoning straight away, and the mistakes you make are brought back later, when you are ready to test yourself again.</p>
+<p class="bodycopy">Every question is written for the NEET UG syllabus and checked chapter by chapter before it reaches students. It is a practice companion for your textbooks, not a replacement for them.</p></div></div>
+<div class="features"><div class="feature"><b>01</b><h3>Never see a repeat</h3><p>A question you have answered is never served to you as new again. Fresh questions only, until a topic is truly finished.</p></div>
+<div class="feature"><b>02</b><h3>A solution for every question</h3><p>Step-by-step reasoning, and why each wrong option is wrong, right after you answer.</p></div>
+<div class="feature"><b>03</b><h3>Timed tests, real marking</h3><p>Each exam uses its own marking scheme, such as +4 / −1 / 0, shown before you start and applied exactly.</p></div>
+<div class="feature"><b>04</b><h3>Revision that returns</h3><p>Questions you got wrong come back after a few days, and are retired once you answer them right in a row.</p></div>
+<div class="feature"><b>05</b><h3>Analytics by chapter</h3><p>First-try accuracy, weak topics and days practised, so you spend time where it counts.</p></div>
+<div class="feature"><b>06</b><h3>Modules of your own</h3><p>Combine chapters, choose difficulty and question source, and save the module to reuse.</p></div></div></section>
+
+<section class="screens" id="screens"><div class="section"><div class="section-head"><div><div class="kicker">/ Inside SnapMCQ</div><h2 class="heading">The app, screen by screen.</h2></div><p>Real screens from the current build of the app. Practice, tests and analytics all work today; we are polishing before the public release.</p></div>
+<div class="shots">
+<figure class="shot"><div class="phone"><img src="/assets/snapmcq/snapmcq-home.webp" alt="SnapMCQ home screen showing daily goal, streak and revision" width="780" height="1688" loading="lazy"></div><figcaption>Your day at a glance<small>Daily goal, streak, revision due and the next best chapter to practise.</small></figcaption></figure>
+<figure class="shot"><div class="phone"><img src="/assets/snapmcq/snapmcq-question-bank.webp" alt="SnapMCQ question bank with chapter progress" width="780" height="1688" loading="lazy"></div><figcaption>Chapter-wise question bank<small>Physics, Chemistry and Biology by class, with progress for every chapter and topic.</small></figcaption></figure>
+<figure class="shot"><div class="phone"><img src="/assets/snapmcq/snapmcq-practice-solution.webp" alt="SnapMCQ practice screen showing a worked solution" width="780" height="1688" loading="lazy"></div><figcaption>Solution after every answer<small>See the correct option and why the others are wrong, then flag or bookmark.</small></figcaption></figure>
+<figure class="shot"><div class="phone"><img src="/assets/snapmcq/snapmcq-timed-test.webp" alt="SnapMCQ timed test screen" width="780" height="1688" loading="lazy"></div><figcaption>Timed tests<small>A palette, mark for review and the exam's own marking scheme shown on screen.</small></figcaption></figure>
+<figure class="shot"><div class="phone"><img src="/assets/snapmcq/snapmcq-test-result.webp" alt="SnapMCQ test result screen" width="780" height="1688" loading="lazy"></div><figcaption>Clear test results<small>Score, correct and incorrect counts, section breakdown and a full review.</small></figcaption></figure>
+<figure class="shot"><div class="phone"><img src="/assets/snapmcq/snapmcq-analytics.webp" alt="SnapMCQ analytics screen by subject" width="780" height="1688" loading="lazy"></div><figcaption>Analytics that point somewhere<small>First-try accuracy by subject and chapter, so you know what to fix next.</small></figcaption></figure>
+<figure class="shot"><div class="phone"><img src="/assets/snapmcq/snapmcq-custom-module.webp" alt="SnapMCQ custom module builder" width="780" height="1688" loading="lazy"></div><figcaption>Build your own module<small>Pick chapters, set the rules and practise exactly what you need.</small></figcaption></figure>
+<figure class="shot"><div class="phone"><img src="/assets/snapmcq/snapmcq-welcome.webp" alt="SnapMCQ welcome screen" width="780" height="1688" loading="lazy"></div><figcaption>Simple to start<small>Sign in with your email. No password to remember.</small></figcaption></figure>
+</div>
+<p class="note">Screens are from the current build and are shown with sample data. The final app, content and design may change before release.</p></div></section>
+
+<section class="section"><div class="kicker">/ Where we are</div><h2 class="heading">Being built, in the open.</h2>
+<p class="bodycopy" style="max-width:660px;margin-top:20px">SnapMCQ is under active development. Here is an honest picture of what is ready and what is on the way.</p>
+<div class="status">
+<div class="card"><span class="tag now">Ready</span><h3>Built and working</h3><ul><li>NEET UG Class 11 practice for Physics, Chemistry and Biology: over 4,000 questions</li><li>Solutions, timed tests, revision queue, analytics, custom modules</li><li>Email sign-in and in-app account deletion</li></ul></div>
+<div class="card"><span class="tag next">Next</span><h3>Being prepared</h3><ul><li>NEET UG Class 12 questions in preparation</li><li>Closed testing with a small group of students</li><li>Release on Google Play, then the App Store</li></ul></div>
+<div class="card"><span class="tag later">Later</span><h3>On the roadmap</h3><ul><li>JEE Main</li><li>Weekly mock tests and rankings</li><li>Institute batches with their own leaderboards</li></ul></div>
+</div></section>
+
+<section class="screens"><div class="section"><div class="kicker">/ Built for students</div><h2 class="heading">Privacy and safety first.</h2>
+<div class="trustgrid">
+<div class="card"><h3>No password, no clutter</h3><ul style="list-style:none;padding:0"><li>Sign in with a one-time code sent to your email.</li></ul></div>
+<div class="card"><h3>Your data, your call</h3><ul style="list-style:none;padding:0"><li>Delete your account and all your data from inside the app, any time. Accounts unused for three years are removed automatically after notice.</li></ul></div>
+<div class="card"><h3>Younger students</h3><ul style="list-style:none;padding:0"><li>Students under 18 need a parent or guardian's details at sign-up. Read our <a href="/products/applications/snapmcq/privacy/" style="color:var(--teal)">Privacy Policy</a>.</li></ul></div>
+</div></div></section>
+
+<section class="final"><div class="kicker">COMING SOON</div><h2>Be among the first<br>to practise.</h2><p>SnapMCQ will be on Google Play and the App Store soon. If you are a student, a parent or an institute who would like early access, write to us and we will tell you when it is ready.</p>
+<div class="stores"><div class="store"><small>COMING SOON</small>Google Play</div><div class="store"><small>COMING SOON</small>App Store</div></div>
+<a class="btn" href="mailto:helpnavts@gmail.com?subject=SnapMCQ%20early%20access">Ask for early access</a></section>
+</main>
+<footer class="footer"><span>© <span id="year"></span> NAVTS. All rights reserved.</span><span>SnapMCQ · An NAVTS application</span><a href="/">NAVTS Home ↗</a><nav aria-label="SnapMCQ legal and support" style="display:flex;gap:18px;flex-wrap:wrap"><a href="/products/applications/snapmcq/privacy/">Privacy</a><a href="/products/applications/snapmcq/terms/">Terms</a><a href="/products/applications/snapmcq/support/">Support</a><a href="/products/applications/snapmcq/delete-account/">Delete account</a></nav></footer>
+</div><script src="/script.js?v=navts2026"></script><script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>
